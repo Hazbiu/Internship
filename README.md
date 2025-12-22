@@ -11,7 +11,7 @@ If you will use a conda environment, make sure that the python version you are u
 
 ---
 
-## Installation of the ROS2 Jazzy
+# Installation of the ROS2 Jazzy
 
 Run on terminal the commands listed below:
 
