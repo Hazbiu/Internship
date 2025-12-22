@@ -24,4 +24,6 @@ sudo apt install ros-jazzy-turtlebot3*
 
 Run the command listed below:
 
+```bash
 ros2 run rqt_graph rqt_graph
+```
