@@ -19,3 +19,5 @@ The following packages are required:
 sudo apt install ros-jazzy-navigation2 ros-jazzy-nav2-bringup
 sudo apt install ros-jazzy-turtlebot3*
 
+# How to get the rqt graph?
+
