@@ -29,3 +29,27 @@ Run the command listed below:
 ```bash
 ros2 run rqt_graph rqt_graph
 ```
+---
+# ROS 2 topic publisher
+
+## Move forward
+
+```bash
+ros2 topic pub /cmd_vel geometry_msgs/msg/Twist \
+"{linear: {x: 0.3, y: 0.0}, angular: {z: 0.0}}"
+```
+
+## Rotate in place
+
+```bash
+ros2 topic pub /cmd_vel geometry_msgs/msg/Twist \
+"{linear: {x: 0.0, y: 0.0}, angular: {z: 0.6}}"
+```
+
+## Move sideways
+
+```bash
+ros2 topic pub /cmd_vel geometry_msgs/msg/Twist \
+"{linear: {x: 0.0, y: 0.0}, angular: {z: 0.6}}"
+```
+---
