@@ -21,11 +21,12 @@ sudo apt install ros-jazzy-turtlebot3*
 
 ---
 
-# How to get the rqt gaph?
+## How to get the rqt graph?
 
 Run on terminal the commands listed below:
 
 ```bash
 ros2 run rqt_graph rqt_graph
+
 
 ---
