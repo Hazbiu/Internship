@@ -32,6 +32,8 @@ ros2 run rqt_graph rqt_graph
 ---
 # ROS 2 topic publisher
 
+Below are listed the command to move the robot in doffrent directions.
+
 ## Move forward
 
 ```bash
