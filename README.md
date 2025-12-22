@@ -20,3 +20,6 @@ sudo apt install ros-jazzy-turtlebot3*
 
 # How to get the rqt graph?
 
+Run the command listed below:
+
+ros2 run rqt_graph rqt_graph
