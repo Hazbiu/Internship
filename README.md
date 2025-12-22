@@ -15,8 +15,10 @@ If you will use a conda environment, make sure that the python version you are u
 
 The following packages are required:
 
+```bash
 sudo apt install ros-jazzy-navigation2 ros-jazzy-nav2-bringup
 sudo apt install ros-jazzy-turtlebot3*
+```
 
 # How to get the rqt graph?
 
