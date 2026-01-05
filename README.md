@@ -61,3 +61,12 @@ ros2 topic pub /cmd_vel geometry_msgs/msg/Twist \
 "{linear: {x: 0.0, y: 0.0}, angular: {z: 0.6}}"
 ```
 ---
+
+# How to use teleop?
+
+Run the command listed below:
+
+```bash
+ros2 run teleop_twist_keyboard teleop_twist_keyboard
+```
+---
