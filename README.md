@@ -70,3 +70,19 @@ Run the command listed below:
 ros2 run teleop_twist_keyboard teleop_twist_keyboard
 ```
 ---
+
+
+
+# Professor 
+
+source /opt/ros/jazzy/setup.bash
+source ~/bookros2_ws/install/setup.bash
+ros2 launch br2_tiago sim.launch.py
+
+
+
+
+
+source /opt/ros/jazzy/setup.bash
+source ~/bookros2_ws/install/setup.bash
+ros2 launch br2_navigation tiago_navigation.launch.py use_sim_time:=true
