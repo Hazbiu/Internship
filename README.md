@@ -71,7 +71,12 @@ ros2 run teleop_twist_keyboard teleop_twist_keyboard
 ```
 ---
 
+# Error logs print command:
 
+```bash
+grep -E "\[ERROR\]|\[WARN\]" ~/kaya_logs/$(ls -t ~/kaya_logs/ | head -1)
+```
+----
 
 # Professor 
 
