@@ -1,0 +1,42 @@
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+-- Configuring done (0.6s)
+-- Generating done (0.0s)
+-- Build files have been written to: /home/hazbiu/ros2_ws/build/carter_v1_navigation
+-- Install configuration: ""
+-- Installing: /home/hazbiu/ros2_ws/install/carter_v1_navigation/share/carter_v1_navigation/launch
+-- Installing: /home/hazbiu/ros2_ws/install/carter_v1_navigation/share/carter_v1_navigation/launch/carter_v1_navigation.launch.py
+-- Installing: /home/hazbiu/ros2_ws/install/carter_v1_navigation/share/carter_v1_navigation/params
+-- Installing: /home/hazbiu/ros2_ws/install/carter_v1_navigation/share/carter_v1_navigation/params/carter_v1_nav2_params.yaml
+-- Installing: /home/hazbiu/ros2_ws/install/carter_v1_navigation/share/carter_v1_navigation/maps
+-- Installing: /home/hazbiu/ros2_ws/install/carter_v1_navigation/share/carter_v1_navigation/maps/Carter_ROS2_Sensors.yaml
+-- Installing: /home/hazbiu/ros2_ws/install/carter_v1_navigation/share/carter_v1_navigation/maps/Carter_ROS2_Sensors.png
+-- Installing: /home/hazbiu/ros2_ws/install/carter_v1_navigation/share/carter_v1_navigation/rviz2
+-- Installing: /home/hazbiu/ros2_ws/install/carter_v1_navigation/share/carter_v1_navigation/rviz2/carter_v1_navigation.rviz
+-- Installing: /home/hazbiu/ros2_ws/install/carter_v1_navigation/share/ament_index/resource_index/package_run_dependencies/carter_v1_navigation
+-- Installing: /home/hazbiu/ros2_ws/install/carter_v1_navigation/share/ament_index/resource_index/parent_prefix_path/carter_v1_navigation
+-- Installing: /home/hazbiu/ros2_ws/install/carter_v1_navigation/share/carter_v1_navigation/environment/ament_prefix_path.sh
+-- Installing: /home/hazbiu/ros2_ws/install/carter_v1_navigation/share/carter_v1_navigation/environment/ament_prefix_path.dsv
+-- Installing: /home/hazbiu/ros2_ws/install/carter_v1_navigation/share/carter_v1_navigation/environment/path.sh
+-- Installing: /home/hazbiu/ros2_ws/install/carter_v1_navigation/share/carter_v1_navigation/environment/path.dsv
+-- Installing: /home/hazbiu/ros2_ws/install/carter_v1_navigation/share/carter_v1_navigation/local_setup.bash
+-- Installing: /home/hazbiu/ros2_ws/install/carter_v1_navigation/share/carter_v1_navigation/local_setup.sh
+-- Installing: /home/hazbiu/ros2_ws/install/carter_v1_navigation/share/carter_v1_navigation/local_setup.zsh
+-- Installing: /home/hazbiu/ros2_ws/install/carter_v1_navigation/share/carter_v1_navigation/local_setup.dsv
+-- Installing: /home/hazbiu/ros2_ws/install/carter_v1_navigation/share/carter_v1_navigation/package.dsv
+-- Installing: /home/hazbiu/ros2_ws/install/carter_v1_navigation/share/ament_index/resource_index/packages/carter_v1_navigation
+-- Installing: /home/hazbiu/ros2_ws/install/carter_v1_navigation/share/carter_v1_navigation/cmake/carter_v1_navigationConfig.cmake
+-- Installing: /home/hazbiu/ros2_ws/install/carter_v1_navigation/share/carter_v1_navigation/cmake/carter_v1_navigationConfig-version.cmake
+-- Installing: /home/hazbiu/ros2_ws/install/carter_v1_navigation/share/carter_v1_navigation/package.xml

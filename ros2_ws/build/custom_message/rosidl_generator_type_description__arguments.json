@@ -1,0 +1,11 @@
+{
+  "package_name": "custom_message",
+  "output_dir": "/home/hazbiu/ros2_ws/build/custom_message/rosidl_generator_type_description/custom_message",
+  "idl_tuples": [
+    "/home/hazbiu/ros2_ws/build/custom_message/rosidl_adapter/custom_message:msg/SampleMsg.idl"
+  ],
+  "include_paths": [
+    "std_msgs:/opt/ros/jazzy/share/std_msgs",
+    "builtin_interfaces:/opt/ros/jazzy/share/builtin_interfaces"
+  ]
+}
