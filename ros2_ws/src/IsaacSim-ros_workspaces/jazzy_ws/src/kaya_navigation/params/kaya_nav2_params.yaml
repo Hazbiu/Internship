@@ -7,6 +7,7 @@ amcl:
     alpha4: 0.2
     alpha5: 0.2
     base_frame_id: "base_link"
+    introspection_mode: "disabled"
     beam_skip_distance: 0.5
     beam_skip_error_threshold: 0.9
     beam_skip_threshold: 0.3
@@ -17,15 +18,19 @@ amcl:
     laser_max_range: 100.0
     laser_min_range: -1.0
     laser_model_type: "likelihood_field"
-    max_beams: 360
+    max_beams: 60
     max_particles: 2000
     min_particles: 500
     odom_frame_id: "odom"
     pf_err: 0.05
     pf_z: 0.99
+    random_seed: -1
+    controller:
+      k_phi: 3.0
+      k_delta: 2.0
     recovery_alpha_fast: 0.0
     recovery_alpha_slow: 0.0
-    resample_interval: 3
+    resample_interval: 1
     robot_model_type: "nav2_amcl::OmniMotionModel"
     save_pose_rate: 0.5
     sigma_hit: 0.2
@@ -36,12 +41,14 @@ amcl:
     z_hit: 0.5
     z_max: 0.05
     z_rand: 0.5
-    z_short: 0.05
+    z_short: 0.005s
     scan_topic: /scan
     map_topic: /map
     set_initial_pose: true
     always_reset_initial_pose: false
     first_map_only: false
+    bond_heartbeat_period: 0.25
+    allow_parameter_qos_overrides: true
     initial_pose:
       x: -6.0
       y: -1.0
@@ -55,6 +62,68 @@ amcl_map_client:
 amcl_rclcpp_node:
   ros__parameters:
     use_sim_time: True
+
+coverage_server:
+  ros__parameters:
+    coordinates_in_cartesian_frame: true
+    robot_width: 2.1
+    operation_width: 2.5
+    min_turning_radius: 0.4
+    linear_curv_change: 2.0
+    default_allow_overlap: true
+    default_headland_width: 0.5
+    default_path_continuity_type: "CONTINUOUS"
+    default_path_type: "DUBINS"
+    default_route_type: "BOUSTROPHEDON"
+    default_swath_angle_type: "BRUTE_FORCE"
+    default_swath_type: "LENGTH"
+    default_turn_point_distance: 0.1
+
+following_server:
+  ros__parameters:
+    controller_frequency: 50.0
+    detection_timeout: 2.0
+    rotate_to_object_timeout: 10.0
+    static_object_timeout: 30.0  # -1.0 for indefinite following
+    linear_tolerance: 0.15
+    angular_tolerance: 0.15
+    max_retries: 3
+    base_frame: "base_link"
+    fixed_frame: "odom"
+    filter_coef: 0.1
+    desired_distance: 1.0
+    skip_orientation: true
+    search_by_rotating: false
+    odom_topic: "odom"
+    odom_duration: 0.3
+    transform_tolerance: 0.1
+  
+  loopback_simulator:
+  ros__parameters:
+    base_frame_id: "base_link"
+    odom_frame_id: "odom"
+    map_frame_id: "map"
+    scan_frame_id: "base_scan"  # tb4_loopback_simulator.launch.py remaps to 'rplidar_link'
+    update_duration: 0.02
+    scan_range_min: 0.05
+    scan_range_max: 30.0
+    scan_angle_min: -3.1415
+    scan_angle_max: 3.1415
+    scan_angle_increment: 0.02617
+    scan_use_inf: true
+
+    # Controller configuration (inherited from docking controller)
+    controller:
+      k_phi: 3.0
+      k_delta: 2.0
+      beta: 0.4
+      lambda: 2.0
+      v_linear_min: 0.1
+      v_linear_max: 0.5
+      v_angular_max: 1.0
+      slowdown_radius: 0.15
+      use_collision_detection: false
+      transform_tolerance: 0.1
 
 bt_navigator:
   ros__parameters:
@@ -99,6 +168,9 @@ docking_server:
     dock_backwards: false
     dock_prestaging_tolerance: 0.5
 
+    controller:
+      k_phi: 3.0
+      k_delta: 2.0
     # Types of docks
     dock_plugins: ['simple_charging_dock']
     simple_charging_dock:
@@ -152,7 +224,20 @@ velocity_smoother:
     # max_decel: [-1.0, 0.0, -1.25] 
     odom_topic: "/odom" 
     odom_duration: 0.1
-
+smoother_server:
+  ros__parameters:
+    costmap_topic: global_costmap/costmap_raw
+    footprint_topic: global_costmap/published_footprint
+    robot_base_frame: base_link
+    transform_tolerance: 0.1
+    smoother_plugins: ["savitzky_golay_smoother"]
+    savitzky_golay_smoother:
+      plugin: "nav2_smoother::SavitzkyGolaySmoother"
+      window_size: 7
+      poly_order: 3
+      do_refinement: True
+      refinement_num: 2
+      enforce_path_inversion: True
 controller_server:
   ros__parameters:
     use_sim_time: True
@@ -178,7 +263,20 @@ controller_server:
     #  plugin: "nav2_controller::SimpleGoalChecker"
     #  xy_goal_tolerance: 0.25
     #  yaw_goal_tolerance: 0.25
-    #  stateful: True
+    #  stateful: Truesmoother_server:
+  ros__parameters:
+    costmap_topic: global_costmap/costmap_raw
+    footprint_topic: global_costmap/published_footprint
+    robot_base_frame: base_link
+    transform_tolerance: 0.1
+    smoother_plugins: ["savitzky_golay_smoother"]
+    savitzky_golay_smoother:
+      plugin: "nav2_smoother::SavitzkyGolaySmoother"
+      window_size: 7
+      poly_order: 3
+      do_refinement: True
+      refinement_num: 2
+      enforce_path_inversion: True
     general_goal_checker:
       stateful: True
       plugin: "nav2_controller::SimpleGoalChecker"
@@ -302,7 +400,20 @@ collision_monitor:
     stop_pub_timeout: 2.0
     # Polygons represent zone around the robot for "stop", "slowdown" and "limit" action types,
     # and robot footprint for "approach" action type.
-    polygons: ["FootprintApproach"]
+    polygons: ["FootprintApproach"]smoother_server:
+  ros__parameters:
+    costmap_topic: global_costmap/costmap_raw
+    footprint_topic: global_costmap/published_footprint
+    robot_base_frame: base_link
+    transform_tolerance: 0.1
+    smoother_plugins: ["savitzky_golay_smoother"]
+    savitzky_golay_smoother:
+      plugin: "nav2_smoother::SavitzkyGolaySmoother"
+      window_size: 7
+      poly_order: 3
+      do_refinement: True
+      refinement_num: 2
+      enforce_path_inversion: True
     FootprintApproach:
       type: "polygon"
       action_type: "approach"
@@ -336,13 +447,13 @@ map_saver:
 planner_server:
   ros__parameters:
     use_sim_time: True
-    expected_planner_frequency: 12.0
+    expected_planner_frequency: 20.0
     planner_plugins: ["GridBased"]
     GridBased:
       plugin: "nav2_navfn_planner::NavfnPlanner"
-      tolerance: 1.5
       use_astar: true
       allow_unknown: true
+      tolerance: 1.0
 
 planner_server_rclcpp_node:
   ros__parameters:
@@ -350,20 +461,29 @@ planner_server_rclcpp_node:
 
 smoother_server:
   ros__parameters:
-    use_sim_time: True
+    costmap_topic: global_costmap/costmap_raw
+    footprint_topic: global_costmap/published_footprint
+    robot_base_frame: base_link
+    transform_tolerance: 0.1
     smoother_plugins: ["simple_smoother"]
     simple_smoother:
       plugin: "nav2_smoother::SimpleSmoother"
       tolerance: 1.0e-10
-      max_its: 1000
       do_refinement: True
+      refinement_num: 2
+      max_its: 1000
+      w_data: 0.2
+      w_smooth: 0.3
+      enforce_path_inversion: True
 
 behavior_server:
   ros__parameters:
     use_sim_time: True
-    costmap_topic: local_costmap/costmap_raw
-    footprint_topic: local_costmap/published_footprint
-    cycle_frequency: 5.0
+    local_costmap_topic: local_costmap/costmap_raw
+    global_costmap_topic: global_costmap/costmap_raw
+    local_footprint_topic: local_costmap/published_footprint
+    global_footprint_topic: global_costmap/published_footprint
+    cycle_frequency: 10.0
     behavior_plugins: ["spin", "backup", "drive_on_heading", "wait"]
     spin:
       plugin: "nav2_behaviors::Spin"
@@ -373,13 +493,15 @@ behavior_server:
       plugin: "nav2_behaviors::DriveOnHeading"
     wait:
       plugin: "nav2_behaviors::Wait"
-    global_frame: odom
+    local_frame: odom
+    global_frame: map
     robot_base_frame: base_link
-    transform_tolerance: 1.0
+    transform_tolerance: 0.1
     simulate_ahead_time: 2.0
-    max_rotational_vel: 1.2
+    max_rotational_vel: 1.0
     min_rotational_vel: 0.4
     rotational_acc_lim: 3.2
+    enable_stamped_cmd_vel: true
 
 robot_state_publisher:
   ros__parameters:
