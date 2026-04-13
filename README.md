@@ -71,6 +71,13 @@ ros2 run teleop_twist_keyboard teleop_twist_keyboard
 ```
 ---
 
+# Teleop command:
+
+```bash
+ros2 run teleop_twist_keyboard teleop_twist_keyboard
+```
+----
+
 # Error logs print command:
 
 ```bash
