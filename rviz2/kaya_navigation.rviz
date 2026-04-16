@@ -82,7 +82,9 @@ Visualization Manager:
       Frame Timeout: 15
       Frames:
         All Enabled: false
-        RPLidar_S2E:
+        imu_layer:
+          Value: true
+        lidar_layer:
           Value: true
         axle_0:
           Value: true

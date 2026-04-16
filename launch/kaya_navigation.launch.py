@@ -41,6 +41,12 @@ def generate_launch_description():
         ),
     )
 
+    ekf_param_dir = os.path.join(
+    get_package_share_directory("kaya_navigation"),
+    "params",
+    "ekf.yaml"
+    )
+
 
     nav2_bringup_launch_dir = os.path.join(get_package_share_directory("nav2_bringup"), "launch")
 
@@ -55,10 +61,19 @@ def generate_launch_description():
             DeclareLaunchArgument(
                 "use_sim_time", default_value="True", description="Use simulation (Omniverse Isaac Sim) clock if True"
             ),
+            Node(
+                package="robot_localization",
+                executable="ekf_node",
+                name="ekf_filter_node",
+                output="screen",
+                parameters=[ekf_param_dir, {"use_sim_time": use_sim_time}],
+                remappings=[("odometry/filtered", "/odom")],
+            ),
             IncludeLaunchDescription(
                 PythonLaunchDescriptionSource(os.path.join(nav2_bringup_launch_dir, "rviz_launch.py")),
                 launch_arguments={"namespace": "", "use_namespace": "False", "rviz_config": rviz_config_dir, "use_sim_time": use_sim_time}.items(),
             ),
+            
             IncludeLaunchDescription(
                 PythonLaunchDescriptionSource([nav2_bringup_launch_dir, "/bringup_launch.py"]),
                 launch_arguments={"map": map_dir, "use_sim_time": use_sim_time, "params_file": param_dir}.items(),
