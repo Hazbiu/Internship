@@ -37,3 +37,27 @@ To navigate the Kaya robot, follow these steps:
    ```
 
 After this, RViz should open and the Kaya robot navigation setup should start.
+
+
+
+## Current Limitations of the Project
+
+There are two known limitations in the current navigation setup:
+
+1. **Global Costmap Obstacle Layer Issue**
+
+   If the `obstacle_layer` is included inside the `plugins` list of the `global_costmap` parameters, the implemented areas shown in the RViz map can appear abnormal or incorrect.
+
+   Because of this, the `obstacle_layer` should not be added to the `global_costmap` plugins unless the configuration is carefully adjusted and tested.
+
+2. **First Goal May Be Aborted**
+
+   After running the navigation script:
+
+   ```bash
+   ./startRViz.sh
+   ```
+
+   and sending the first navigation goal in RViz, the goal will most likely be aborted.
+
+   After this first aborted goal, the system usually behaves normally, and the following navigation goals can be executed correctly.
