@@ -1,0 +1,85 @@
+[0.170s] Invoking command in '/home/hazbiu/ros2_ws/build/kaya_navigation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/hazbiu/ros2_ws/src/IsaacSim-ros_workspaces/jazzy_ws/src/kaya_navigation -DCMAKE_INSTALL_PREFIX=/home/hazbiu/ros2_ws/install/kaya_navigation
+[0.216s] -- The C compiler identification is GNU 13.3.0
+[0.263s] -- The CXX compiler identification is GNU 13.3.0
+[0.279s] -- Detecting C compiler ABI info
+[0.357s] -- Detecting C compiler ABI info - done
+[0.366s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.367s] -- Detecting C compile features
+[0.367s] -- Detecting C compile features - done
+[0.377s] -- Detecting CXX compiler ABI info
+[0.461s] -- Detecting CXX compiler ABI info - done
+[0.468s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.468s] -- Detecting CXX compile features
+[0.469s] -- Detecting CXX compile features - done
+[0.474s] -- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.602s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.768s] -- Configuring done (0.6s)
+[0.770s] -- Generating done (0.0s)
+[0.771s] -- Build files have been written to: /home/hazbiu/ros2_ws/build/kaya_navigation
+[0.776s] Invoked command in '/home/hazbiu/ros2_ws/build/kaya_navigation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/hazbiu/ros2_ws/src/IsaacSim-ros_workspaces/jazzy_ws/src/kaya_navigation -DCMAKE_INSTALL_PREFIX=/home/hazbiu/ros2_ws/install/kaya_navigation
+[0.778s] Invoking command in '/home/hazbiu/ros2_ws/build/kaya_navigation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/hazbiu/ros2_ws/build/kaya_navigation -- -j24 -l24
+[0.809s] Invoked command in '/home/hazbiu/ros2_ws/build/kaya_navigation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/hazbiu/ros2_ws/build/kaya_navigation -- -j24 -l24
+[0.810s] Invoking command in '/home/hazbiu/ros2_ws/build/kaya_navigation': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/hazbiu/ros2_ws/build/kaya_navigation
+[0.817s] -- Install configuration: ""
+[0.817s] -- Installing: /home/hazbiu/ros2_ws/install/kaya_navigation/share/kaya_navigation/launch
+[0.817s] -- Installing: /home/hazbiu/ros2_ws/install/kaya_navigation/share/kaya_navigation/launch/install
+[0.817s] -- Installing: /home/hazbiu/ros2_ws/install/kaya_navigation/share/kaya_navigation/launch/install/setup.bash
+[0.817s] -- Installing: /home/hazbiu/ros2_ws/install/kaya_navigation/share/kaya_navigation/launch/install/local_setup.bash
+[0.818s] -- Installing: /home/hazbiu/ros2_ws/install/kaya_navigation/share/kaya_navigation/launch/install/local_setup.ps1
+[0.818s] -- Installing: /home/hazbiu/ros2_ws/install/kaya_navigation/share/kaya_navigation/launch/install/local_setup.zsh
+[0.818s] -- Installing: /home/hazbiu/ros2_ws/install/kaya_navigation/share/kaya_navigation/launch/install/setup.ps1
+[0.818s] -- Installing: /home/hazbiu/ros2_ws/install/kaya_navigation/share/kaya_navigation/launch/install/local_setup.sh
+[0.818s] -- Installing: /home/hazbiu/ros2_ws/install/kaya_navigation/share/kaya_navigation/launch/install/setup.zsh
+[0.818s] -- Installing: /home/hazbiu/ros2_ws/install/kaya_navigation/share/kaya_navigation/launch/install/setup.sh
+[0.818s] -- Installing: /home/hazbiu/ros2_ws/install/kaya_navigation/share/kaya_navigation/launch/install/.colcon_install_layout
+[0.818s] -- Installing: /home/hazbiu/ros2_ws/install/kaya_navigation/share/kaya_navigation/launch/install/COLCON_IGNORE
+[0.818s] -- Installing: /home/hazbiu/ros2_ws/install/kaya_navigation/share/kaya_navigation/launch/install/_local_setup_util_ps1.py
+[0.818s] -- Installing: /home/hazbiu/ros2_ws/install/kaya_navigation/share/kaya_navigation/launch/install/_local_setup_util_sh.py
+[0.818s] -- Installing: /home/hazbiu/ros2_ws/install/kaya_navigation/share/kaya_navigation/launch/kaya_navigation.launch.py
+[0.818s] -- Installing: /home/hazbiu/ros2_ws/install/kaya_navigation/share/kaya_navigation/launch/log
+[0.819s] -- Installing: /home/hazbiu/ros2_ws/install/kaya_navigation/share/kaya_navigation/launch/log/build_2026-02-12_16-48-20
+[0.819s] -- Installing: /home/hazbiu/ros2_ws/install/kaya_navigation/share/kaya_navigation/launch/log/build_2026-02-12_16-48-20/logger_all.log
+[0.819s] -- Installing: /home/hazbiu/ros2_ws/install/kaya_navigation/share/kaya_navigation/launch/log/build_2026-02-12_16-48-20/events.log
+[0.819s] -- Installing: /home/hazbiu/ros2_ws/install/kaya_navigation/share/kaya_navigation/launch/log/latest_build
+[0.819s] -- Installing: /home/hazbiu/ros2_ws/install/kaya_navigation/share/kaya_navigation/launch/log/build_2026-02-12_16-46-40
+[0.819s] -- Installing: /home/hazbiu/ros2_ws/install/kaya_navigation/share/kaya_navigation/launch/log/build_2026-02-12_16-46-40/logger_all.log
+[0.819s] -- Installing: /home/hazbiu/ros2_ws/install/kaya_navigation/share/kaya_navigation/launch/log/build_2026-02-12_16-46-40/events.log
+[0.819s] -- Installing: /home/hazbiu/ros2_ws/install/kaya_navigation/share/kaya_navigation/launch/log/COLCON_IGNORE
+[0.819s] -- Installing: /home/hazbiu/ros2_ws/install/kaya_navigation/share/kaya_navigation/launch/log/build_2026-02-12_16-49-53
+[0.819s] -- Installing: /home/hazbiu/ros2_ws/install/kaya_navigation/share/kaya_navigation/launch/log/build_2026-02-12_16-49-53/logger_all.log
+[0.819s] -- Installing: /home/hazbiu/ros2_ws/install/kaya_navigation/share/kaya_navigation/launch/log/build_2026-02-12_16-49-53/events.log
+[0.819s] -- Installing: /home/hazbiu/ros2_ws/install/kaya_navigation/share/kaya_navigation/launch/log/latest
+[0.819s] -- Installing: /home/hazbiu/ros2_ws/install/kaya_navigation/share/kaya_navigation/launch/build
+[0.819s] -- Installing: /home/hazbiu/ros2_ws/install/kaya_navigation/share/kaya_navigation/launch/build/COLCON_IGNORE
+[0.820s] -- Installing: /home/hazbiu/ros2_ws/install/kaya_navigation/share/kaya_navigation/launch/build/.built_by
+[0.820s] -- Installing: /home/hazbiu/ros2_ws/install/kaya_navigation/share/kaya_navigation/params
+[0.820s] -- Installing: /home/hazbiu/ros2_ws/install/kaya_navigation/share/kaya_navigation/params/kaya_nav2_params.yaml
+[0.820s] -- Installing: /home/hazbiu/ros2_ws/install/kaya_navigation/share/kaya_navigation/params/slam_params.yaml
+[0.820s] -- Installing: /home/hazbiu/ros2_ws/install/kaya_navigation/share/kaya_navigation/maps
+[0.820s] -- Installing: /home/hazbiu/ros2_ws/install/kaya_navigation/share/kaya_navigation/maps/KayaMap_clean.pgm
+[0.820s] -- Installing: /home/hazbiu/ros2_ws/install/kaya_navigation/share/kaya_navigation/maps/frames_2026-02-28_10.10.42.pdf
+[0.820s] -- Installing: /home/hazbiu/ros2_ws/install/kaya_navigation/share/kaya_navigation/maps/KayaMap.yaml.save
+[0.820s] -- Installing: /home/hazbiu/ros2_ws/install/kaya_navigation/share/kaya_navigation/maps/frames_2026-02-28_10.10.35.pdf
+[0.820s] -- Installing: /home/hazbiu/ros2_ws/install/kaya_navigation/share/kaya_navigation/maps/KayaMap_ros.png
+[0.820s] -- Installing: /home/hazbiu/ros2_ws/install/kaya_navigation/share/kaya_navigation/maps/KayaMap.png
+[0.820s] -- Installing: /home/hazbiu/ros2_ws/install/kaya_navigation/share/kaya_navigation/maps/frames_2026-02-28_10.10.35.gv
+[0.820s] -- Installing: /home/hazbiu/ros2_ws/install/kaya_navigation/share/kaya_navigation/maps/KayaMap.yaml
+[0.820s] -- Installing: /home/hazbiu/ros2_ws/install/kaya_navigation/share/kaya_navigation/maps/frames_2026-02-28_10.10.42.gv
+[0.820s] -- Installing: /home/hazbiu/ros2_ws/install/kaya_navigation/share/kaya_navigation/rviz2
+[0.820s] -- Installing: /home/hazbiu/ros2_ws/install/kaya_navigation/share/kaya_navigation/rviz2/kaya_navigation.rviz
+[0.821s] -- Installing: /home/hazbiu/ros2_ws/install/kaya_navigation/share/ament_index/resource_index/package_run_dependencies/kaya_navigation
+[0.821s] -- Installing: /home/hazbiu/ros2_ws/install/kaya_navigation/share/ament_index/resource_index/parent_prefix_path/kaya_navigation
+[0.821s] -- Installing: /home/hazbiu/ros2_ws/install/kaya_navigation/share/kaya_navigation/environment/ament_prefix_path.sh
+[0.821s] -- Installing: /home/hazbiu/ros2_ws/install/kaya_navigation/share/kaya_navigation/environment/ament_prefix_path.dsv
+[0.821s] -- Installing: /home/hazbiu/ros2_ws/install/kaya_navigation/share/kaya_navigation/environment/path.sh
+[0.821s] -- Installing: /home/hazbiu/ros2_ws/install/kaya_navigation/share/kaya_navigation/environment/path.dsv
+[0.822s] -- Installing: /home/hazbiu/ros2_ws/install/kaya_navigation/share/kaya_navigation/local_setup.bash
+[0.822s] -- Installing: /home/hazbiu/ros2_ws/install/kaya_navigation/share/kaya_navigation/local_setup.sh
+[0.822s] -- Installing: /home/hazbiu/ros2_ws/install/kaya_navigation/share/kaya_navigation/local_setup.zsh
+[0.822s] -- Installing: /home/hazbiu/ros2_ws/install/kaya_navigation/share/kaya_navigation/local_setup.dsv
+[0.822s] -- Installing: /home/hazbiu/ros2_ws/install/kaya_navigation/share/kaya_navigation/package.dsv
+[0.822s] -- Installing: /home/hazbiu/ros2_ws/install/kaya_navigation/share/ament_index/resource_index/packages/kaya_navigation
+[0.822s] -- Installing: /home/hazbiu/ros2_ws/install/kaya_navigation/share/kaya_navigation/cmake/kaya_navigationConfig.cmake
+[0.822s] -- Installing: /home/hazbiu/ros2_ws/install/kaya_navigation/share/kaya_navigation/cmake/kaya_navigationConfig-version.cmake
+[0.823s] -- Installing: /home/hazbiu/ros2_ws/install/kaya_navigation/share/kaya_navigation/package.xml
+[0.842s] Invoked command in '/home/hazbiu/ros2_ws/build/kaya_navigation' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/hazbiu/ros2_ws/build/kaya_navigation

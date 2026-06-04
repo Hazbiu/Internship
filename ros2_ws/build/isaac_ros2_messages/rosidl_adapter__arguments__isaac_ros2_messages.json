@@ -1,0 +1,10 @@
+{
+  "package_name": "isaac_ros2_messages",
+  "non_idl_tuples": [
+    "/home/hazbiu/ros2_ws/src/IsaacSim-ros_workspaces/jazzy_ws/src/isaac_ros2_messages:srv/IsaacPose.srv",
+    "/home/hazbiu/ros2_ws/src/IsaacSim-ros_workspaces/jazzy_ws/src/isaac_ros2_messages:srv/GetPrims.srv",
+    "/home/hazbiu/ros2_ws/src/IsaacSim-ros_workspaces/jazzy_ws/src/isaac_ros2_messages:srv/GetPrimAttributes.srv",
+    "/home/hazbiu/ros2_ws/src/IsaacSim-ros_workspaces/jazzy_ws/src/isaac_ros2_messages:srv/GetPrimAttribute.srv",
+    "/home/hazbiu/ros2_ws/src/IsaacSim-ros_workspaces/jazzy_ws/src/isaac_ros2_messages:srv/SetPrimAttribute.srv"
+  ]
+}
