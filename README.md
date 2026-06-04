@@ -20,11 +20,7 @@ To navigate the Kaya robot, follow these steps:
 
 3. Press **Play** in Isaac Sim to start the simulation.
 
-4. Open a terminal and go to the `kaya_navigation` directory:
-
-   ```bash
-   cd kaya_navigation
-   ```
+4. Open a terminal and go to the `kaya_navigation` directory.
 
 5. Run the RViz launch script:
 
