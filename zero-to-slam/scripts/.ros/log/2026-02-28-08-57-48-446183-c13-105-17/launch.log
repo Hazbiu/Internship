@@ -1,5 +1,0 @@
-1772269068.4468310 [INFO] [launch]: All log files can be found below /workspace/.ros/log/2026-02-28-08-57-48-446183-c13-105-17
-1772269068.4469240 [INFO] [launch]: Default logging verbosity is set to INFO
-1772269068.4919434 [INFO] [async_slam_toolbox_node-1]: process started with pid [18]
-1772269173.6830173 [WARNING] [launch]: user interrupted with ctrl-c (SIGINT)
-1772269173.8015592 [INFO] [async_slam_toolbox_node-1]: process has finished cleanly [pid 18]
