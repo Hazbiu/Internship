@@ -1,0 +1,14 @@
+build/
+install/
+log/
+.launch/
+*.pyc
+__pycache__/
+*.swp
+*.swo
+.vscode/
+.DS_Store
+
+launch/build/
+launch/install/
+launch/log/
