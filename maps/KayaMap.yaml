@@ -1,6 +1,0 @@
-image: /home/hazbiu/ros2_ws/src/IsaacSim-ros_workspaces/jazzy_ws/src/kaya_navigation/maps/KayaMap_clean.pgm
-resolution: 0.05
-origin: [-9.975, -10.025000190734863, 0.0]
-negate: 0
-occupied_thresh: 0.65
-free_thresh: 0.25
