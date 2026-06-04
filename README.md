@@ -1,4 +1,4 @@
-## Kaya Robot Navigatio
+## Kaya Robot Navigatiom
 
 https://drive.google.com/file/d/1wbu4CFYYdb1A6QALh3H21Rj_6sesPXBn/view
 
