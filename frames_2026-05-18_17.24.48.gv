@@ -1,0 +1,12 @@
+digraph G {
+"base_link" -> "axle_0"[label=" Broadcaster: default_authority\nAverage rate: 60.303\nBuffer length: 3.3\nMost recent transform: 15.200001\nOldest transform: 11.900001\n"];
+"odom" -> "base_link"[label=" Broadcaster: default_authority\nAverage rate: 60.305\nBuffer length: 3.283\nMost recent transform: 15.183334\nOldest transform: 11.900001\n"];
+"base_link" -> "axle_1"[label=" Broadcaster: default_authority\nAverage rate: 60.303\nBuffer length: 3.3\nMost recent transform: 15.200001\nOldest transform: 11.900001\n"];
+"base_link" -> "axle_2"[label=" Broadcaster: default_authority\nAverage rate: 60.303\nBuffer length: 3.3\nMost recent transform: 15.200001\nOldest transform: 11.900001\n"];
+"base_link" -> "RPLidar_S2E"[label=" Broadcaster: default_authority\nAverage rate: 60.303\nBuffer length: 3.3\nMost recent transform: 15.200001\nOldest transform: 11.900001\n"];
+"base_link" -> "Imu_Sensor"[label=" Broadcaster: default_authority\nAverage rate: 60.303\nBuffer length: 3.3\nMost recent transform: 15.200001\nOldest transform: 11.900001\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1779117888.3141837"[ shape=plaintext ] ;
+}->"odom";
+}
