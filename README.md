@@ -4,25 +4,33 @@ This repository contains the work and documentation related to my internship pro
 
 [Kaya_Navigation_Files](https://drive.google.com/file/d/1wbu4CFYYdb1A6QALh3H21Rj_6sesPXBn/view?usp=sharing)
 
-
-
 ## Running Kaya Robot Navigation
 
 To navigate the Kaya robot, follow these steps:
 
-1. Start **Isaac Sim 5.1.0**.
+1. Make sure the `kaya_navigation` folder is placed inside the ROS 2 workspace source directory:
 
-2. Open the Kaya robot scene:
+   ```bash
+   ~/ros2_ws/src/IsaacSim-ros_workspaces/jazzy_ws/src
+   ```
+
+2. Start **Isaac Sim 5.1.0**.
+
+3. Open the Kaya robot scene:
 
    ```text
    kaya.usd
    ```
 
-3. Press **Play** in Isaac Sim to start the simulation.
+4. Press **Play** in Isaac Sim to start the simulation.
 
-4. Open a terminal and go to the `kaya_navigation` directory.
+5. Open a terminal and go to the `kaya_navigation` directory using a relative path from the workspace source directory:
 
-5. Run the RViz launch script:
+   ```bash
+   cd ~/ros2_ws/src/IsaacSim-ros_workspaces/jazzy_ws/src/kaya_navigation
+   ```
+
+6. Run the RViz launch script:
 
    ```bash
    ./startRViz.sh
