@@ -36,6 +36,56 @@ To navigate the Kaya robot, follow these steps:
 
 After this, RViz should open and the Kaya robot navigation setup should start.
 
+## How to create the map using SLAM?
+
+1. Open the Kaya scene in Isaac Sim.
+
+2. Go to:
+   Tools > Robotics > Occupancy Map
+
+3. In the Occupancy Map extension, set the Origin to:
+   X: 0.0
+   Y: 0.0
+   Z: -0.65
+
+4. Set the Upper Bound Z to:
+   Z: 0.2
+
+   This height is used to match the lidar height of the Kaya robot.
+
+5. Select the SimpleRoom prim in the stage.
+
+6. Click BOUND SELECTION.
+
+7. Check that the occupancy map bounds now cover the complete SimpleRoom environment.
+
+8. Delete the Kaya prim from the stage before generating the map.
+
+9. Click CALCULATE.
+
+10. Click VISUALIZE IMAGE.
+
+11. In the Visualization window, save the map image in:
+
+   ~/ros2_ws/src/IsaacSim-ros_workspaces/jazzy_ws/src/kaya_navigation/maps
+
+12. Create a YAML file in the same directory, for example:
+
+   KayaMap.yaml
+
+13. Copy the generated map parameters from the Visualization window into the YAML file, for example:
+
+   image: KayaMap.png
+   mode: 
+   resolution:
+   origin: [ ]
+   negate: 0
+   occupied_thresh:
+   free_thresh:
+
+14. Make sure the image name in the YAML file matches the saved map image name.
+
+15. After this, the map is ready to be used with Nav2.
 
 ## Limitations of the Project
 
