@@ -68,7 +68,7 @@ This step creates the map that will later be used by Nav2.
 
 12. Create a YAML file in the same directory, for example `KayaMap.yaml`.
 
-13. Copy the generated map parameters from the Visualization window into the YAML file:
+13. Copy the generated map parameters from the Visualization window into the YAML file, e.g:
 
     ```yaml
     image: KayaMap.png
