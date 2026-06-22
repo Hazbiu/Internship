@@ -38,8 +38,6 @@ After this, RViz should open and the Kaya robot navigation setup should start.
 
 ## How to create the map using SLAM?
 
-## How to Create the Map Using the Occupancy Map Tool
-
 This step creates the occupancy map that will later be used by Nav2.
 
 1. Open the Kaya scene in Isaac Sim.
@@ -85,36 +83,36 @@ This step creates the occupancy map that will later be used by Nav2.
    ```
 
 10. Click:
-
-```text
-VISUALIZE IMAGE
-```
+   
+   ```text
+   VISUALIZE IMAGE
+   ```
 
 11. In the Visualization window, save the map image in this directory:
 
-```bash
-~/ros2_ws/src/IsaacSim-ros_workspaces/jazzy_ws/src/kaya_navigation/maps
-```
+   ```bash
+   ~/ros2_ws/src/IsaacSim-ros_workspaces/jazzy_ws/src/kaya_navigation/maps
+   ```
 
 12. Create a YAML file in the same directory, for example:
 
-```text
-KayaMap.yaml
-```
+   ```text
+   KayaMap.yaml
+   ```
 
 13. Copy the generated map parameters from the Visualization window into the YAML file.
 
-Example:
+   Example:
 
-```yaml
-image: KayaMap.png
-mode: trinary
-resolution: 0.05
-origin: [0.0, 0.0, 0.0]
-negate: 0
-occupied_thresh: 0.65
-free_thresh: 0.196
-```
+   ```yaml
+   image: KayaMap.png
+   mode: trinary
+   resolution: 0.05
+   origin: [0.0, 0.0, 0.0]
+   negate: 0
+   occupied_thresh: 0.65
+   free_thresh: 0.196
+   ```
 
 14. Make sure the image name in the YAML file matches the saved map image name.
 
